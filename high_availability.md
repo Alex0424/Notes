@@ -1,5 +1,4 @@
 # High Availability
-31.45
 
 High availability(HA) is a characteristic of a system which aims to ensure an agreed level of operational performance, usually uptime, for a higher than normal period.
 
@@ -93,7 +92,15 @@ and PRTG; and SIEMs (Security information and Event Management) systems such as 
 - Grafana Eterprise version with additional capabilities is also available
 - It is expandable through a plug-in system
 - End users can create complex monitoring dashboards using interactive query builders.
-- 
+
+#### Prometheus
+- Grafana visualizes
+- Prometheus collects and stores
+- Good combination!
+- Prometheus is a free software application used for event monitoring and alerting
+- it record real-time metrics in a time series database built using a HTTP pull model, with flexible queries and real time alerting(Grafana has also alerting capabilities)
+- The project is licensed under the Apache 2 License, with source code available on GitHub
+
 #### Downtime
 - Downtime is the enemy
 - Always try to minimize it
@@ -112,3 +119,80 @@ how to calculate uptime/downtime?
 1 - 0.99999 = 0.00001 downtime
 525.600 * 0.00001 = 5.256 minutes downtime per year
 ```
+
+#### Maintenance window / Service window
+
+Usually maintenance/service windows exitsts
+
+Its's the time window within which disruptions can be tolerated
+
+Keep within (if possible) or escalate
+
+#### Fault tolerance
+
+A system's ability to continue operationg properly when one or more of its components fail
+
+Proactive
+- backup data/apps/resources
+- deploy to multiple availability zones
+- load-balance across multiple availability zones
+- monitor health
+
+Reactive
+- restore data/apps to different availability zones
+- deploy to different availability zones
+
+Maintain acceptable continued performance despite temperature, load fluctuations or failures in service or hardware
+
+#### Data center
+- Power(UPS + diesel generator)
+- Cooling
+- Network
+- Physical security (cages, id, 2fa, lock down hw, welded shut, etc)
+- Availability Zone Redundancies/sites/DCs
+  - 2 or more datacenters
+  - Replicate and/or cluster across 2(or more)sites
+
+#### Software side
+scalability: scaling up
+- Vertical scaling
+- The ability to increase the size of existing resources
+- Disruptive (sometimes)
+
+scalability: scaling out
+- Horizontal scaling
+- The ability to increase the instance count of existing resources
+- Non-disruptive
+
+scalability: elasticity
+- The ability to increase or decrease the instance count or size of existing resources based on changes in traffic or workload.
+- Ability to scale in both directions(in/out + up/down)
+- Manual or automatic
+- Pay only for what you use
+
+And what if something DOES go wrong?
+- Backup
+- Restore
+- RPO
+- RTO
+- Business Continuity/Business Recovery Plan
+
+#### Backup & Restore
+A backup is a copy of computer data taken and *stored elsewhere so that is may used to restore the original after a data loss event 3-2-1 rule
+
+There should be at least 3 copies of the data
+Stored in 2 different types of storage media(tape, disk, ssd, optical, papper, ...)
+
+1 copy should be kept offsite, in a remote location (include cloud storage)
+
+Always do the restore tests!
+
+#### RPO & RTO
+
+![image](https://github.com/user-attachments/assets/4a4f1805-7e14-48db-8ac6-a8122cc02b21)
+
+
+Point Objective: How much data can we afford to lose?
+
+Recovery Time Objective: How much downtime can we afford?
+
