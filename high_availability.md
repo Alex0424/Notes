@@ -2,7 +2,7 @@
 
 High availability(HA) is a characteristic of a system which aims to ensure an agreed level of operational performance, usually uptime, for a higher than normal period.
 
-#### To achive HA
+## To achive HA
 - Service Level Agreement (SLA)
 - Service Level Objective (SLO)
 - Downtime
@@ -13,7 +13,7 @@ High availability(HA) is a characteristic of a system which aims to ensure an ag
 - Scalability
 - Elasticity
 
-#### What if something DOES go wrong?
+## What if something DOES go wrong?
 - Backup
 - Restore
 - RPO
@@ -195,4 +195,32 @@ Always do the restore tests!
 Point Objective: How much data can we afford to lose?
 
 Recovery Time Objective: How much downtime can we afford?
+
+Business Continuity Plan
+- scenarios: what could go wrong?
+- impact analysis: if something goes wrong(scenario), what are the consequences
+- disaster recovery plan: if X goes wrong, we will do Y...
+- contact lists: multiple people and ways to contact in case of emergency
+- rollback possible?
+- cackups in order?
+- do we do regular restore tests?
+- replication? 2 sites? 3 sites?
+- test/staging enviroments?
+- clusters? active/active? active/passive? automatic or manuall?
+- who pushes failover button?
+- do we do regular failover tests?
+
+Contact list
+multiple people (bus factor)
+multiple ways to contact in case of emergency
+keep in mind availability 24x7 and during holidays/weekends/vacation
+
+Some good questions to keep in mind!
+- In case of event X...(what if X happens? How does it impact the business?)
+- ...who...(who is responsible and available 24x7?)
+- ...does what...(all technical steps and processes)
+- ...when?(is this critical? can it wait 1 hour? next business day?)
+- in case of problem, call who?(if we don't have the skill, who to call?)
+- Contact list.
+
 
