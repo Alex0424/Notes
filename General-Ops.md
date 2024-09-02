@@ -68,3 +68,37 @@ co-location in somone else's datacenter(how about security?)
 #### Network
 - stable connection with enough bandwidth/throughput outwards
 - cable handling
+
+
+# Ops - Uptime
+
+How important is it for your applications?
+
+Keep in check:
+- fault tolerance
+- redundancy
+
+How much load does your system handle before impacting on uptime?
+
+On prem == 100% your responsibility.
+
+On the cloud == at least can take hardware out the equation.
+
+# Ops - Security
+
+LEAST. PRIVILEGE. PRINCCIPLE. ALWAYS!
+
+Deploy & Upgrade routines:
+- test enviroment first! (sometimes newer version can have bugs)
+
+CVEs, keep up with those
+- do they affect you / your products?
+- do they affect your providers/their products?
+- do they affect their providers/their products?
+
+Security patches, keep up with those
+- sometimes they compromise on performance (specter, meltdown)
+- security upgrades are important (look at change log)
+
+# Ops - Network
+
