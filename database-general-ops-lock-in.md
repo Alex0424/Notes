@@ -1,10 +1,4 @@
-# database-general-ops-lock-in
-
-Datacenter
-
-General Ops
-
-Lock-In
+# Datacenter
 
 Datacenter - where the cloud lives
 
@@ -41,7 +35,31 @@ Redundancy
 Security & access
 - physical security
 - monitoring
-- who comes in?
+- who comes in? (hackers, video-rec cameras in data center)
 - logging (important)
 - not only consider who comes in, but also with what, from a security point of view
 
+### Space (how many racks fit)
+
+rack space
+
+electricity (redundancy: diesel generator(how much time does that buy us?)
+
+temperature control
+- servers give out a lot of warmth
+- could be a positive (district heating)
+
+Fire control
+- systems to choke a fire without damaging the hardware (e.g. gas)
+
+Blade server (next level density!) 
+
+![image](https://github.com/user-attachments/assets/cfb6b2c3-ead4-4298-81dd-07fdc1942ae5)
+
+uses rack space more effective
+
+Thermal challenges
+
+A common challange for datacenters is keeping the temperature down. High temperatures:
+- shoren the lifespan of the hardware
+- lead to worse performance (throttling)
