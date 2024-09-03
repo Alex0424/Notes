@@ -59,3 +59,52 @@ Examples: Jelastic, OpenShift, CloudFoundry, Google apps
 
 Software As A Service
 
+Cloud based applications delivered to users.
+
+Ready enviroment with installed application(s)
+
+The provider is responsible for the maintenance and updates, all the way from the application...
+- ...to the metal, including all layers in-between*.
+
+"Easy" GUI used for configuring (harder when more configurations)
+
+Easy to scale, probably license-driven
+
+Make life easy for your IT-department
+
+*Note: different providers could be responsible for different layers, i.e.: provider X sells you a license for a SaaS product they maintain on a PaaS platform provided by Provider Y that runs on Provider Z's metal(IaaS)
+
+Data security
+- not in your control
+
+You might need to adapt your processes to the tool, and not the other way around(i.e. the product won't be tailored after your needs)
+
+Integrations
+- are they possible?
+- do they require a higher tier license?
+- will they be maintained in the future(looking at you, Slack)
+- "You have no power here"
+
+Performance
+- outside your control
+
+Example: GSuit, Nextcloud, Dropbox, Slack, Trello, Salesforce.
+
+
+s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13.20
