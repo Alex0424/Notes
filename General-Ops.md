@@ -102,3 +102,47 @@ Security patches, keep up with those
 
 # Ops - Network
 
+Cabling
+- fight the mess, be pedantic
+
+Networking hardware
+- set up config, keep it relevant (propagate)
+- firmwares, keep up with those
+
+Firewalls
+- Update
+- Overview(and keep it in sync/relevant)
+- "calendar-effect" over time: make it a routine to checking & closing
+
+# Ops - Backup
+
+What needs to be backed up?
+- What's worth saving up?
+- What data is problematic if lost?
+- What can be backed up easily?
+- What can't be backed up easily?
+
+Generally:
+- How long should backups be kept?
+- Where to keep it?
+- Are you verifying that it's backed up correctly? (do regular testing)
+
+# Ops - Documentation
+
+Why document?
+- People forget
+- New people come in the organization
+- Organizations are complex beasts
+- Ease interaction between teams and systems
+- New processes and tools
+- And many more reasons...
+
+ The ideal documentation
+ - committed to version control
+ - describes what's needed to solve problems
+ - standardises solutions
+ - continuously updated and actualised
+
+Documentation that isn't used is meaningless
+- worse than no documentation at all
+- double the work in the best case scenario
