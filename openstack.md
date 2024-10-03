@@ -53,15 +53,11 @@ Implements and manages services and libraries needed to manage scalable, on-dema
 this is up to the provider
 
 | Flavour        | CPU | RAM    | STORAGE    |
-----------------------------------------------
+|----------------|-----|--------|------------|
 | v1-micro-1     | 1   | 0.5 GB | 20 GB SSD  |
-----------------------------------------------
 | v1-standard-1  | 1   | 4 GB   | 40 GB SSD  |
-----------------------------------------------
 | v1-standard-4  | 4   | 16 GB  | 160 GB SSD |
-----------------------------------------------
 | v1-dedicated-8 | 8   | 64 GB  | 800 GB SSD |
-----------------------------------------------
 
 # Neutron
 
