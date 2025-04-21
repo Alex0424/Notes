@@ -111,7 +111,27 @@ Envoy and Linkerd are simple for REST-style services.
 
 # Networking and Runtime
 
-### Container native networks.
+### Container native networks(in CNCF landksape)
+- confusing
+
+CNI (https://github.com/containernetworking/cni)
+1. generic plugin-based networking solution for containers.
+2. Runtime determines which network the container should belong to and which plugins to execute.
+3. Runtime adds the container to each network, executing the corresponding plugins for each network sequentially.
+- The network config is a JSON file.
+
+CNI: Invoking Plugin
+- Container runtime must create a new network namespace for the container
+
+most used networking providers with Kubernetes:
+- Project Calco
+- flannel
+
+### Database Storage
+
+run databases on Kubernetes
+
+1 before 4.Application Observability...
 
 # Application Observability, Analysis, and Security
 
