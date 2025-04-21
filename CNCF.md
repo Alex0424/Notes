@@ -1,137 +1,179 @@
-# Cloud Native Comouting Foundation
+# 🌩️ Cloud Native Computing Foundation (CNCF)
 
-CNCF is an open source software foundation that hosts and nurtures projects like Kubernetes and Prometheus.
+CNCF is an open-source software foundation that hosts and nurtures projects like **Kubernetes** and **Prometheus**.
 
-- It fosters the evolution of project and the entire ecosystem
-- Always up to date
-- Good compatibility
-- promotes success for entire eco-system
+- 🚀 Fosters the evolution of projects and the entire ecosystem  
+- 🔄 Always up to date  
+- ✅ Ensures good compatibility  
+- 🌱 Promotes success for the entire ecosystem  
 
-- Cloud Native Landskape/Ecosystem (Open Source)
+### 🌐 Cloud Native Landscape / Ecosystem (Open Source)
 
-- Landskape example: https://landskape.cncf.io
+- Landscape Example: https://landscape.cncf.io  
+- Encompasses all the categories, projects, and companies  
+- Over **450** cards in this ecosystem  
 
-- Encompasses all the categories, projects and companies.
-- Over 450 cards in this ecosystem.
+👉 It's recommended to visit the **Trailmap for Beginners**: https://github.com/cncf/trailmap
 
-Its recomended to visit trailmap for begginers: https://github.com/cncf/trailmap
+---
 
-# Management and Orchestration
+# ⚙️ Management and Orchestration
 
-1. Containerize your application (Docker, ContainerD, Podman)
-2. Continuos integration (Build container image, Store in image repository) [use argo for cicd]
-3. Continuos delivery (Deploy staging or production enviroment)
-4. How to run container?
-   - With Kubernetes(https://kubernetes.io/docs/tutorials/kubernetes-basics/):
-     - Allows you to run your containers at scale.
-     - Manages compute resources elegantly.
-     - Cloud agnostic.
-     - Kubernetes manifest good for simple application.
-     - But needs a package manager for complex microservices.
-       - Popular choice is Helm: https://helm.sh.
-         - It allows you to define, install, and upgrade Kubernetes applications via Helm Charts.
-         - You can create, version, share and publish Helm Charts.
-         - Think of it like apt for linux, NPM for node/javascript application.
-    - Alternate Paradigms(Stream data, messaging interface for microservices) CNCF projects example:
-      - HTTP APIs: REST or SOAP
-      - Remote procedure calls: gRPC (good choice if REST or SOAP arent performant well)
-      - Messaging or queuing: NATS
-      - Events: cloud events
+1. **Containerize your application** (e.g., Docker, Containerd, Podman)  
+2. **Continuous Integration**  
+   - Build container image  
+   - Store it in an image repository  
+   - ✅ Use **Argo** for CI/CD  
+3. **Continuous Delivery**  
+   - Deploy to staging or production environments  
 
-### Service discovery
+### 🚀 How to run containers?
 
-Tools: Consul, etcd, CoreDNS
-- kubernetes have etcd cluster to store its data.
-- kubernetes have a DNS(e.g.: CoreDNS) provider for the DNS layer.
+Use **Kubernetes**: https://kubernetes.io/docs/tutorials/kubernetes-basics/
 
-CoreDNS:
-- CNCF graduated project
-- Fast and flexible
-- Plug-in architecture
-- Written in Golang: so if a func is not out of the box, you can add to it by writing a plugin.
-- recomended for kubernetes
+- Run containers at scale  
+- Efficiently manage compute resources  
+- Cloud-agnostic  
+- Great for simple applications (via Kubernetes manifests)  
+- For complex microservices, use a package manager like **Helm**  
+  - Helm: https://helm.sh  
+    - Define, install, and upgrade Kubernetes apps with **Helm Charts**  
+    - Create, version, share, and publish Helm Charts  
+    - 🧰 Think of it like `apt` for Linux or `npm` for JavaScript  
 
-### Container Registry
-- A container registry essentially acts as a place for developers to store container images and share them out via a process of uploading (pushing) to the registry and downloading (pulling) into another system, like aKubernetes cluster. Once you pull the image, the application within it can be run on that system.
-- Container registry hosts:
-- Docker Hub
-- Gitlab
-- Jfrog
-- Harbor
-- Cloud providers have container registry as well e.g.: Azure
-- CNCF Container Registry: Harbor:
-  - Open-source registry that secures artifacts with policies and role-based access control.
-  - It ensures that images are scaned and free from vulnerabilities and signs images as trusted (Good choice if company dont have a registry allready).
-  - It looks full featured and is a graduated CNCF project.
+### 🔁 Alternate Paradigms (CNCF Projects for Communication)
 
-### Managing cloud native services
+- HTTP APIs: REST, SOAP  
+- Remote Procedure Calls: **gRPC** (better if REST or SOAP performance is lacking)  
+- Messaging/Queuing: **NATS**  
+- Eventing: **CloudEvents**
 
-Karthik Gaekwad estimates that Service Management will show most growth in the next few years.
+---
 
-Goal was to create an "Operation tool" that can deploy and manage your application.
-- This is where cubernetes comes in and solves the problem in an elegant fashion.
-- As Kubernetes grew many people asked about OPS(How do i scalable nodes) and DEV(How can i manage application in a better way?)
-- - This is captured in Service Management diagram.
+## 🔎 Service Discovery
 
-### Service Mesh
+**Tools**: Consul, etcd, CoreDNS  
+- Kubernetes uses **etcd** as its primary data store  
+- Kubernetes uses a DNS provider like **CoreDNS**  
 
-The layer that handles all of the communication and network intricacies between microservices.
+### CoreDNS
 
-- Linkerd
-  - Transparent network proxy
-  - Acts as a service mesh
-  - One-stop shop for managing, controlling, and monitoring service-to-service communication in large application
-  - Used extensively around the world.
-  - Use this to simplify communication within their software inrastructure.
-  - Features include
-    - latancy-aware load balancing
-    - connection pooling
-    - Transport Layer Security(TLS)
-    - Instrumentation
-    - This makes your code scalable, performant and resiliant
+- 🎓 CNCF Graduated Project  
+- Fast & Flexible  
+- Plug-in architecture  
+- Written in **Go** – extensible via plugins  
+- ✅ Recommended for Kubernetes
 
-Envoy
-- comes from Linkerd and was written in C++
-- Idea of Envoy is similar to Linkerd
-- Small server with small footprint
-- supports http2 and gRCP
-- Supports advanced load balancing e.g.: rate limiting, automatic retries...
-- request-level routing 
-- Highly configurable, providing APIs for configuration management.
-- Allows distributed request tracing and wire-level observabillity.
+---
 
-### Differences?
-Linkerd
-- bigger consumes more cpu and memmory, offers minimalistic configuration
-- business support hot reloads by design.
-- instead relying on service abstractions and dynamic provisioning.
-- Support the Thrift protocol in addition http2 and gRCP. 
+## 📦 Container Registry
 
-Envoy and Linkerd are simple for REST-style services.
+A container registry is a place to store and share container images.
 
-# Networking and Runtime
+You can **push** images to a registry and **pull** them into environments like Kubernetes clusters.
 
-### Container native networks(in CNCF landksape)
-- confusing
+### Popular Container Registries:
 
-CNI (https://github.com/containernetworking/cni)
-1. generic plugin-based networking solution for containers.
-2. Runtime determines which network the container should belong to and which plugins to execute.
-3. Runtime adds the container to each network, executing the corresponding plugins for each network sequentially.
-- The network config is a JSON file.
+- Docker Hub  
+- GitLab  
+- JFrog  
+- Harbor  
+- Cloud Provider Registries (e.g., Azure Container Registry)
 
-CNI: Invoking Plugin
-- Container runtime must create a new network namespace for the container
+### CNCF Registry: **Harbor**
 
-most used networking providers with Kubernetes:
-- Project Calco
-- flannel
+- 🔓 Open-source registry  
+- Secures artifacts with policies & RBAC  
+- Scans images for vulnerabilities  
+- Supports trusted image signing  
+- 🎯 Great choice if your company doesn’t already have a registry  
+- 🎓 CNCF Graduated Project
+
+---
+
+## 📈 Managing Cloud-Native Services
+
+👤 *Karthik Gaekwad* predicts **Service Management** will grow rapidly in the coming years.
+
+- The goal: create tools that deploy and manage apps effectively  
+- **Kubernetes** solves this problem elegantly  
+
+### Dev & Ops Needs:
+
+- **Ops**: "How do I scale nodes?"  
+- **Dev**: "How can I manage apps better?"  
+
+These are addressed in the **Service Management** architecture.
+
+---
+
+## 🔗 Service Mesh
+
+Handles communication and network intricacies between microservices.
+
+### 🔹 Linkerd
+
+- Transparent network proxy  
+- Provides service mesh capabilities  
+- One-stop for managing, controlling, and monitoring service-to-service communication  
+- 🌍 Widely used globally  
+- Makes code scalable, performant, and resilient  
+
+**Features:**
+- Latency-aware load balancing  
+- Connection pooling  
+- TLS (Transport Layer Security)  
+- Instrumentation
+
+### 🔹 Envoy
+
+- Originated from Linkerd  
+- Written in C++  
+- Small server with minimal footprint  
+- Supports HTTP/2 and gRPC  
+- Advanced load balancing: rate limiting, retries, etc.  
+- Request-level routing  
+- Highly configurable with APIs  
+- Allows distributed tracing and observability at the wire level
+
+### 🔍 Key Differences
+
+**Linkerd:**
+- Heavier: consumes more CPU and memory  
+- Minimalistic configuration  
+- Hot reloads supported natively  
+- Supports service abstraction and dynamic provisioning  
+- Protocol support: Thrift, HTTP/2, gRPC  
+
+Both are great for REST-style microservices.
+
+---
+
+# 🌐 Networking and Runtime
+
+### Container-Native Networking (in CNCF Landscape)
+
+🔌 Can be confusing at first – focus on **CNI**!
+
+### CNI – Container Network Interface  
+GitHub: https://github.com/containernetworking/cni
+
+1. Plugin-based networking solution  
+2. Container runtime decides network and plugins  
+3. Runtime adds container to each network sequentially using plugins  
+4. Network config is a **JSON file**
+
+🧠 The container runtime must create a new **network namespace** for each container.
+
+### Popular Networking Providers for Kubernetes:
+
+- **Project Calico**  
+- **Flannel**
 
 ### Database Storage
 
-run databases on Kubernetes
-
-1 before 4.Application Observability...
+more info coming soon, taking a break for now.
+\\1 before 4.Application Observability...
 
 # Application Observability, Analysis, and Security
 
