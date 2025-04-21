@@ -66,8 +66,52 @@ CoreDNS:
 
 ### Managing cloud native services
 
+Karthik Gaekwad estimates that Service Management will show most growth in the next few years.
+
+Goal was to create an "Operation tool" that can deploy and manage your application.
+- This is where cubernetes comes in and solves the problem in an elegant fashion.
+- As Kubernetes grew many people asked about OPS(How do i scalable nodes) and DEV(How can i manage application in a better way?)
+- - This is captured in Service Management diagram.
+
+### Service Mesh
+
+The layer that handles all of the communication and network intricacies between microservices.
+
+- Linkerd
+  - Transparent network proxy
+  - Acts as a service mesh
+  - One-stop shop for managing, controlling, and monitoring service-to-service communication in large application
+  - Used extensively around the world.
+  - Use this to simplify communication within their software inrastructure.
+  - Features include
+    - latancy-aware load balancing
+    - connection pooling
+    - Transport Layer Security(TLS)
+    - Instrumentation
+    - This makes your code scalable, performant and resiliant
+
+Envoy
+- comes from Linkerd and was written in C++
+- Idea of Envoy is similar to Linkerd
+- Small server with small footprint
+- supports http2 and gRCP
+- Supports advanced load balancing e.g.: rate limiting, automatic retries...
+- request-level routing 
+- Highly configurable, providing APIs for configuration management.
+- Allows distributed request tracing and wire-level observabillity.
+
+### Differences?
+Linkerd
+- bigger consumes more cpu and memmory, offers minimalistic configuration
+- business support hot reloads by design.
+- instead relying on service abstractions and dynamic provisioning.
+- Support the Thrift protocol in addition http2 and gRCP. 
+
+Envoy and Linkerd are simple for REST-style services.
 
 # Networking and Runtime
+
+### Container native networks.
 
 # Application Observability, Analysis, and Security
 
